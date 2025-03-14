@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>번개장터</title>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="번개장터css/index.css">
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        window.onload = () => {
+            // 메뉴 버튼 클릭 시 nav에 active 클래스 추가/삭제
+            let menuBtn = document.querySelector('.menu_btn');
+            let allMenu = document.querySelector('.nav');
+
+            menuBtn.addEventListener('click', () => {
+
+                allMenu.classList.toggle('active');
+            });
+
+            // Swiper 인스턴스 생성 (다른 변수명 사용)
+            let mainSwiper = new Swiper(".main-swiper", {});
+
+            let visualSwiper = new Swiper(".visual-swiper", {
+                cssMode: true,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                autoplay: {
+                    delay: 3000, /* 1000ms = 1s */
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                },
+                mousewheel: true,
+                keyboard: true,
+            });
+            let topButton = document.getElementById("topButton");
+
+            if (topButton) { // 버튼이 존재할 경우에만 이벤트 추가
+                topButton.addEventListener("click", () => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth" // 부드럽게 이동
+                    });
+                });
+            }
+        }; // script end
+
+
+    </script>
+
+</head>
+
+<body>
+    <header class="header">
+        <section class="section-01">
+            <div class="inner">
+                <div class="logo">
+                    <div class="logo_image1">
+                        <a href="#"><img src="번개장터이미지/로고.png" alt="">앱 다운로드</a>
+                    </div><!-- .logo_image1 end -->
+                    <div class="logo_image2">
+                        <a href="#"><img src="번개장터이미지/별로고.png" alt="">즐겨찾기</a>
+                    </div><!-- .logo_image2 end -->
+                </div><!-- logo end -->
+
+                <div class="text">
+                    <a href="#">로그인/회원가입</a>
+                </div><!-- text end -->
+
+            </div><!-- .inner end -->
+
+        </section><!-- .section-01 end -->
+
+        <section class="section-02">
+            <nav class="nav2">
+
+                <div class="item_wrap">
+                    <div class="item-01">
+                        <div class="logo">
+                            <a href="#"><img src="번개장터이미지/헤더로고.png" alt=""></a>
+                        </div><!-- .logo end -->
+
+                        <div class="search-box">
+                            <input type="text" placeholder="상품명, 지역명, @상점명 입력">
+                            <div class="icon">
+                                <a href="#"><img src="번개장터이미지/돋보기.png" alt="검색하기"></a>
+                            </div><!-- .icon end -->
+                        </div><!-- .search_box end -->
+
+                        <div class="menu_box">
+                            <div class="item_box">
+                                <a href="#"><img src="번개장터이미지/판매하기.png" alt="판매하기"></a>
+                                <a href="#">
+                                    <p>판매하기</p>
+                                </a>
+                            </div><!-- .item_box end -->
+
+                            <div class="item_box">
+                                <a href="#"><img src="번개장터이미지/내상점.png" alt="내상점"></a>
+                                <a href="#">
+                                    <p>내상점</p>
+                                </a>
+                            </div><!-- .item_box end -->
+
+                            <div class="item_box">
+                                <a href="#"><img src="번개장터이미지/번개톡.png" alt="번개톡"></a>
+                                <a href="#">
+                                    <p>번개톡</p>
+                                </a>
+                            </div><!-- .item_box end -->
+                        </div><!-- .menu_box end -->
+                    </div><!-- .item-01 end -->
+
+                </div><!-- .item_wrap end -->
+
+            </nav><!-- .nav2 end -->
+        </section><!-- .section-02 end -->
+
+    </header> <!-- .header end -->
+
+    <menu class="menu">
+        <div class="inner">
+
+            <button class="menu_btn">
+                <p><img src="번개장터이미지/카테고리버튼.png" alt="카테고리">번개장터 판매자 센터</p>
+
+            </button><!-- .menu_btn end -->
+
+            <nav class="nav">
+                <ul class="gnb">
+                    <li>
+                        <div class="main_text">
+                            <a href="#" class="depth-01">전체 카테고리</a>
+                        </div><!-- .main_text end -->
+                        <ul class="depth-02">
+                            <li><a href="#">남성의류</a></li>
+                            <li><a href="#">여성의류</a></li>
+                            <li><a href="#">신발</a></li>
+                            <li><a href="#">액세서리</a></li>
+                            <li><a href="#">도서/티켓</a></li>
+                            <li><a href="#">게임</a></li>
+                            <li><a href="#">가전제품</a></li>
+                            <li><a href="#">전자기기</a></li>
+                            <li><a href="#">반려동물</a></li>
+                            <li><a href="#">육아</a></li>
+                            <li><a href="#">기타</a></li>
+                        </ul><!-- depth-02 -->
+                    </li>
+                </ul><!-- .gnb end -->
+            </nav><!-- .nav end -->
+
+        </div><!-- .inner end -->
+
+    </menu><!-- .menu end -->
+
+    <div class="sub_menu">
+        <nav class="nav_sub">
+            <div class="gnb2">
+                <li>
+                    <div class="item">
+                        <a href="#">
+                            <p>찜한상품</p>
+                            <div class="item_text">
+                                <img src="번개장터이미지/하트로고.png" alt="찜한상품">
+                                <span>0</span>
+                            </div><!-- .item_text -->
+                        </a>
+                    </div><!-- .item end -->
+
+
+
+                    <div class="item_2">
+                        <a href="#">
+                            <div class="p">
+                                <p>최근본상품 </p>
+                            </div><!-- .p end -->
+                            <div class="text_dot">
+                                <b>..........</b>
+                            </div><!-- .text_dot end -->
+                            <div class="img"><img src="번개장터이미지/눈로고.png" alt="최근본상품"></div><!-- .img end -->
+                            <div class="span"><span>최근 본 상품이<br />없습니다.</span></div><!-- .span end -->
+                        </a>
+                    </div><!-- .item_2 end -->
+
+                    <div class="btn">
+                        <a href="#">
+                            <button id="topButton" class="top-btn">TOP</button>
+                        </a>
+                    </div><!-- .btn end -->
+                </li>
+
+            </div><!-- .gnb2 end -->
+        </nav><!-- .nav_sub end -->
+    </div><!-- .sub_menu end -->
+
+
+    <section class="visual">
+        <!-- Swiper -->
+        <div class="swiper visual-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="번개장터이미지/안전한럭셔리.webp" alt=""></div>
+                <div class="swiper-slide"><img src="번개장터이미지/부담없는하이엔드2.webp" alt=""></div>
+                <div class="swiper-slide"><img src="번개장터이미지/결제할인3.webp" alt=""></div>
+                <div class="swiper-slide"><img src="번개장터이미지/느낌좋은4.webp" alt=""></div>
+                <div class="swiper-slide"><img src="번개장터이미지/봄스타일링5.webp" alt=""></div>
+                <div class="swiper-slide"><img src="번개장터이미지/인기져지6.webp" alt=""></div>
+                <div class="swiper-slide"><img src="번개장터이미지/추천럭셔리7.webp" alt=""></div>
+            </div><!-- .swiper-wrapper end -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div><!-- .visual-swiper end -->
+
+        <div class="sub-visual">
+            <div class="item">
+                <div class="image_box">
+                    <img src="번개장터이미지/중고거래QR.png" alt="앱 다운로드">
+                </div><!-- .image_box end -->
+
+                <div class="image_box2">
+                    <div class="google"><a href="#"><img src="번개장터이미지/구글앱스토어.svg" alt="구글플레이"></a></div>
+                    <div class="apple"><a href="#"><img src="번개장터이미지/애플앱스토어.svg" alt="앱스토어"></a></div>
+                </div><!-- .image_box2 end -->
+
+            </div><!-- .item end -->
+        </div><!-- .sub-visual end -->
+
+    </section><!-- .visual end -->
+
+    <section class="main-viusal">
+        <div class="main">
+            <h1>오늘의 상품 추천</h1>
+            <a href="#"><button>더보기+</button></a>
+            <!-- Swiper -->
+            <div class="swiper main-swiper">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="text_box1">
+                            <a href="#"><strong>아이패드 7세대 로즈골드 32GB <br />Wi-Fi + 애플펜슬 1세대</strong></a>
+                            <a href="#">
+                                <p>운아기 인형 플러시키링플러쉬</p>
+                            </a>
+                            <a href="#">
+                                <p>스투시 아워레가시 올리브 티셔츠</p>
+                            </a>
+                            <a href="#">
+                                <p>일렉기타 + 전자키보드(건반)</p>
+                            </a>
+                            <a href="#">
+                                <p>구찌 홀스빗 프린스타운 블로퍼</p>
+                            </a>
+                        </div><!-- .text_box end -->
+
+                        <div class="image_box">
+                            <img src="번개장터이미지/아이패드.png" alt="아이패드">
+                        </div><!-- .image_box end -->
+
+                        <div class="sub_text">
+                            <a href="#">
+                                <h2>아이패드 7세대 로즈골드 32GB <br />Wi-Fi + 애플펜슬 1세대</h2>
+                                <span>210,000원</span>
+                                <b>(20시간 전)</b>
+                        </div><!-- .sub_text end -->
+                    </div><!-- .swiper-slide end -->
+
+                    <div class="swiper-slide">
+                        <div class="text_box2">
+                            <a href="#">
+                                <span>아이패드 7세대 로즈골드 32GB<br />Wi-Fi + 애플펜슬 1세대</span>
+                            </a>
+
+                            <a href="#"><strong>운아기 인형 플러시키링플러쉬</strong></a>
+                            <a href="#">
+                                <p>스투시 아워레가시 올리브 티셔츠</p>
+                            </a>
+                            <a href="#">
+                                <p>일렉기타 + 전자키보드(건반)</p>
+                            </a>
+                            <a href="#">
+                                <p>구찌 홀스빗 프린스타운 블로퍼</p>
+                            </a>
+                        </div><!-- .text_box end -->
+
+                        <div class="image_box">
+                            <img src="번개장터이미지/키링.png" alt="키링">
+                        </div><!-- .image_box end -->
+
+                        <div class="sub_text">
+                            <a href="#">
+                                <h2>운아기 인형 플러시키링플러쉬</h2>
+                            </a>
+                            <span>65,000원</span>
+                            <b>(13시간 전)</b>
+                        </div><!-- .sub_text end -->
+                    </div><!-- .swiper-slide end -->
+
+                    <div class="swiper-slide">
+                        <div class="text_box2">
+                            <a href="#">
+                                <span>아이패드 7세대 로즈골드 32GB <br />Wi-Fi + 애플펜슬 1세대</span>
+                            </a>
+                            <a href="#">
+                                <p>운아기 인형 플러시키링플러쉬</p>
+                            </a>
+                            <a href="#"><strong>스투시 아워레가시 올리브 티셔츠</strong></a>
+                            <a href="#">
+                                <p>일렉기타 + 전자키보드(건반)</p>
+                            </a>
+                            <a href="#">
+                                <p>구찌 홀스빗 프린스타운 블로퍼</p>
+                            </a>
+                        </div><!-- .text_box end -->
+
+                        <div class="image_box">
+                            <img src="번개장터이미지/스투시.png" alt="스투시티셔츠">
+                        </div><!-- .image_box end -->
+                        <div class="sub_text">
+                            <a href="#">
+                                <h2>스투시 아워레가시 올리브 티셔츠</h2>
+                            </a>
+                            <span>121,500원</span>
+                            <b>(1주 전)</b>
+                        </div><!-- .sub_text end -->
+                    </div><!-- .swiper-slide end -->
+
+                    <div class="swiper-slide">
+                        <div class="text_box2">
+                            <a href="#">
+                                <span>아이패드 7세대 로즈골드 32GB <br />Wi-Fi + 애플펜슬 1세대</span>
+                            </a>
+                            <a href="#">
+                                <p>운아기 인형 플러시키링플러쉬</p>
+                            </a>
+                            <a href="#">
+                                <p>스투시 아워레가시 올리브 티셔츠</p>
+                            </a>
+                            <a href="#"><strong>일렉기타 + 전자키보드(건반)</strong></a>
+                            <a href="#">
+                                <p>구찌 홀스빗 프린스타운 블로퍼</p>
+                            </a>
+                        </div><!-- .text_box end -->
+
+                        <div class="image_box">
+                            <img src="번개장터이미지/기타,건반.png" alt="일렉기타+전자키보드">
+                        </div><!-- .image_box end -->
+                        <div class="sub_text">
+                        <a href="#">
+                            <h2>일렉기타 + 전자키보드(건반)</h2>
+                        </a>
+                        <span>390,000원</span>
+                        <b>(6시간 전)</b>
+                    </div><!-- .sub_text end -->
+                    </div><!-- .swiper-slide end -->
+
+                    <div class="swiper-slide">
+                        <div class="text_box2">
+                            <a href="#">
+                                <span>아이패드 7세대 로즈골드 32GB <br />Wi-Fi + 애플펜슬 1세대</span>
+                            </a>
+                            <a href="#">
+                                <p>운아기 인형 플러시키링플러쉬</p>
+                            </a>
+                            <a href="#">
+                                <p>스투시 아워레가시 올리브 티셔츠</p>
+                            </a>
+                            <a href="#">
+                                <p>일렉기타 + 전자키보드(건반)</p>
+                            </a>
+                            <a href="#"><strong>구찌 홀스빗 프린스타운 블로퍼</strong></a>
+                        </div><!-- .text_box end -->
+
+                        <div class="image_box">
+                            <img src="번개장터이미지/블로퍼.png" alt="구찌블로퍼">
+                        </div><!-- .image_box end -->
+                        <div class="sub_text">
+                        <a href="#">
+                            <h2>구찌 홀스빗 프린스타운 블로퍼</h2>
+                        </a>
+                        <span>260,000원</span>
+                        <b>(3일 전)</b>
+                    </div><!-- .sub_text end -->
+                    </div><!-- .swiper-slide end -->
+                    
+                </div><!-- .swiper-wrapper end -->
+            </div><!-- .main-swiper end -->
+        </div><!-- .main end -->
+    </section><!-- .main-viusal end -->
+
+    <footer class="footer">
+        <div class="text_box">
+            <a href="#">
+                <p>회사소개 |</p>
+            </a>
+            <a href="#">
+                <p>이용약관 |</p>
+            </a>
+            <a href="#">
+                <p>운영정책 |</p>
+            </a>
+            <a href="#"><strong>운영정책 |</strong></a>
+            <a href="#">
+                <p>청소년보호정책 |</p>
+            </a>
+            <a href="#">
+                <p>광고제휴 |</p>
+            </a>
+        </div><!-- .text_box end -->
+        <div class="text_wrap">
+            <div class="text1">
+                <span>번개장터(주) 사업자정보</span>
+                <p>대표이사 : 최재화, 강승현 | 개인정보보호책임자 : 박병성<br /> 사업자등록번호 : 113-86-45836 | 통신판매업신고 : 2019-서울서초-1126 <br />
+                    호스팅서비스 제공자 : Amazon Web Services (AWS)<br /> EMAIL : help@bunjang.co.kr | FAX : 02-598-8241 <br />
+                    주소 : 서울특별시 서초구 서초대로 38길
+                    12, 7, 10층(서초동, 마제스타시티, 힐스테이트 서리풀) <br />사업자정보 확인
+                    번개장터(주)센터필드점 | 최재화, 강승현 | 808-85-01905 <br />
+                    서울특별시 강남구 테헤란로 231, 쇼핑몰동 1층 W124호(역삼동)(역삼동, 센터필드)</p>
+            </div><!-- .text1 end -->
+
+            <div class="text2">
+                <p>고객센터<br />
+                    1670-2910 <br />
+                    운영시간 9시 - 18시 (주말/공휴일 휴무, 점심시간 12시 - 13시) <br />
+                    공지사항1:1 문의하기자주 묻는 질문<br />
+                    우리은행 채무지급보증 안내<br />
+                    번개장터㈜는 회사가 직접 판매하는 상품에 한하여, 고객님의 현금 결제 금액에 대해 우리은행과 채무지급보증 계약을 체결하여<br />
+                    안전거래를 보장하고 있습니다. <br />
+                    서비스 가입사실 확인<br />
+                    Ⓒ Bungaejangter. Inc All rights reserved.</p>
+            </div><!-- .text2 end -->
+
+            <div class="image_box">
+                <a href="#"><img src="번개장터이미지/번개장터로고.png" alt="번개장터로고"></a>
+                <a href="#"><img src="번개장터이미지/페이스북로고.png" alt="페이스북"></a>
+                <a href="#"><img src="번개장터이미지/인스타로고.png" alt="인스타"></a>
+                <a href="#"><img src="번개장터이미지/유튜브로고.png" alt="유튜브"></a>
+            </div><!-- .image_box end -->
+
+        </div><!-- .text_wrap end -->
+    </footer><!-- .footer end -->
+</body>
+
+</html>
