@@ -529,7 +529,9 @@ button {
     border-radius: 10px;
     border: 1px solid #B4AEAE;
 }
-
+.main-viusal .main .swiper-slide a {
+    display: block;
+}
 .main-viusal .main .swiper-slide .sub_text {
     flex-wrap: wrap;
     flex-direction: column;
@@ -606,4 +608,96 @@ button {
     color: #666666;
     border-bottom: 1px solid #666666;
     margin: 40px 0;
+}
+
+.footer {
+    width: 1920px;
+    height: 100%;
+    padding-top: 150px;
+}
+
+.footer .footer_item {
+    width: 1920px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: flex-start;
+
+}
+
+.footer .text_box {
+    width: 1920px;
+    height: 30px;
+    display: block;
+    border-top: 1px solid #B4AEAE;
+    border-bottom: 1px solid #B4AEAE;
+    position: relative;
+}
+
+.footer .text_box .text {
+    width: 1240px;
+    height: 22px;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 auto;
+    position: absolute;
+    top: 50;
+    left: 50;
+    transform: translateX(60%);
+    gap: 8px;
+}
+.footer .text_box a {
+    height: 22px;
+}
+.footer .text_box a p {
+    font-size: 14px;
+    font-family: "Noto Sans KR", serif;
+}
+
+.footer .text_wrap {
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+    gap: 80px;
+    /* flex-wrap: wrap; */
+}
+
+.footer .text_wrap .text1 {}
+
+.footer .text_wrap .text1 span {
+    font-size: 12px;
+    font-family: "Noto Sans KR", serif;
+    font-weight: bold;
+}
+
+.footer .text_wrap .text1 p {
+    font-size: 12px;
+    font-family: "Noto Sans KR", serif;
+}
+.footer .text_wrap .text2 {
+   margin-top: auto;
+}
+.footer .text_wrap .text2 p {
+    font-size: 12px;
+    font-family: "Noto Sans KR", serif;
+}
+.footer .text_wrap .image_box {
+    display: flex;
+    align-items: flex-end;
+    padding-left: 20px;
+    gap: 20px;
+}
+.footer .text_wrap .image_box img {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+}
+
+.footer .text_wrap .image_box .logo img {
+    width: 113px;
+    height: 35px;
+    object-fit: cover;
+    padding-top: 10px;
 }
