@@ -629,7 +629,7 @@ button {
 .footer .text_box {
     width: 1920px;
     height: 30px;
-    display: block;
+    display: flex;
     border-top: 1px solid #B4AEAE;
     border-bottom: 1px solid #B4AEAE;
     position: relative;
